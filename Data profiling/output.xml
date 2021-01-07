@@ -1,0 +1,221 @@
+<?xml version="1.0"?>
+<DataProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
+  <ProfileVersion>1.0</ProfileVersion>
+  <DataSources>
+    <DtsDataSource ID="{0BE2D432-DBC6-4468-9249-D8AA886CC050}" Name="DESKTOP-SAMSON.AdventureWorks2019">
+      <DtsConnectionManagerID>DESKTOP-SAMSON.AdventureWorks2019</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{6E21FDC8-0273-48A7-92E0-D889CEB1EB93}" Name="output.xml">
+      <DtsConnectionManagerID>output.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+  </DataSources>
+  <DataProfileInput>
+    <ProfileMode>Exact</ProfileMode>
+    <Timeout>0</Timeout>
+    <Requests>
+      <CandidateKeyProfileRequest ID="KeyReq">
+        <DataSourceID>{0BE2D432-DBC6-4468-9249-D8AA886CC050}</DataSourceID>
+        <Table Schema="dbo" Table="AWBuildVersion" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
+        <DataSourceID>{0BE2D432-DBC6-4468-9249-D8AA886CC050}</DataSourceID>
+        <Table Schema="dbo" Table="AWBuildVersion" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq">
+        <DataSourceID>{0BE2D432-DBC6-4468-9249-D8AA886CC050}</DataSourceID>
+        <Table Schema="dbo" Table="AWBuildVersion" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq">
+        <DataSourceID>{0BE2D432-DBC6-4468-9249-D8AA886CC050}</DataSourceID>
+        <Table Schema="dbo" Table="AWBuildVersion" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
+        <DataSourceID>{0BE2D432-DBC6-4468-9249-D8AA886CC050}</DataSourceID>
+        <Table Schema="dbo" Table="AWBuildVersion" />
+        <Column IsWildCard="true" />
+        <Option>AllValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <ColumnPatternProfileRequest ID="PatternReq">
+        <DataSourceID>{0BE2D432-DBC6-4468-9249-D8AA886CC050}</DataSourceID>
+        <Table Schema="dbo" Table="AWBuildVersion" />
+        <Column IsWildCard="true" />
+        <MaxNumberOfPatterns>10</MaxNumberOfPatterns>
+        <PercentageDataCoverageDesired>95</PercentageDataCoverageDesired>
+        <CaseSensitive>false</CaseSensitive>
+        <Delimiters> \t\r\n</Delimiters>
+        <Symbols>,.;:-"'`~=&amp;/\\@!?()&lt;&gt;[]{}|#*^%</Symbols>
+        <TagTableName />
+      </ColumnPatternProfileRequest>
+    </Requests>
+  </DataProfileInput>
+  <DataProfileOutput>
+    <Profiles>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{0BE2D432-DBC6-4468-9249-D8AA886CC050}</DataSourceID>
+        <Table DataSource="DESKTOP-SAMSON" Database="AdventureWorks2019" Schema="dbo" Table="AWBuildVersion" RowCount="-1" />
+        <KeyColumns>
+          <Column Name="SystemInformationID" SqlDbType="TinyInt" MaxLength="0" Precision="3" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{0BE2D432-DBC6-4468-9249-D8AA886CC050}</DataSourceID>
+        <Table DataSource="DESKTOP-SAMSON" Database="AdventureWorks2019" Schema="dbo" Table="AWBuildVersion" RowCount="-1" />
+        <Column Name="SystemInformationID" SqlDbType="TinyInt" MaxLength="0" Precision="3" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{0BE2D432-DBC6-4468-9249-D8AA886CC050}</DataSourceID>
+        <Table DataSource="DESKTOP-SAMSON" Database="AdventureWorks2019" Schema="dbo" Table="AWBuildVersion" RowCount="-1" />
+        <Column Name="Database Version" SqlDbType="NVarChar" MaxLength="25" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{0BE2D432-DBC6-4468-9249-D8AA886CC050}</DataSourceID>
+        <Table DataSource="DESKTOP-SAMSON" Database="AdventureWorks2019" Schema="dbo" Table="AWBuildVersion" RowCount="-1" />
+        <Column Name="VersionDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{0BE2D432-DBC6-4468-9249-D8AA886CC050}</DataSourceID>
+        <Table DataSource="DESKTOP-SAMSON" Database="AdventureWorks2019" Schema="dbo" Table="AWBuildVersion" RowCount="-1" />
+        <Column Name="ModifiedDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{0BE2D432-DBC6-4468-9249-D8AA886CC050}</DataSourceID>
+        <Table DataSource="DESKTOP-SAMSON" Database="AdventureWorks2019" Schema="dbo" Table="AWBuildVersion" RowCount="1" />
+        <Column Name="Database Version" SqlDbType="NVarChar" MaxLength="25" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        <NumberOfDistinctValues>1</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>14.0.1000.169</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{0BE2D432-DBC6-4468-9249-D8AA886CC050}</DataSourceID>
+        <Table DataSource="DESKTOP-SAMSON" Database="AdventureWorks2019" Schema="dbo" Table="AWBuildVersion" RowCount="1" />
+        <KeyColumns>
+          <Column Name="Database Version" SqlDbType="NVarChar" MaxLength="25" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{0BE2D432-DBC6-4468-9249-D8AA886CC050}</DataSourceID>
+        <Table DataSource="DESKTOP-SAMSON" Database="AdventureWorks2019" Schema="dbo" Table="AWBuildVersion" RowCount="1" />
+        <Column Name="VersionDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        <NumberOfDistinctValues>1</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>2017-08-22T19:39:35.6430000</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{0BE2D432-DBC6-4468-9249-D8AA886CC050}</DataSourceID>
+        <Table DataSource="DESKTOP-SAMSON" Database="AdventureWorks2019" Schema="dbo" Table="AWBuildVersion" RowCount="1" />
+        <KeyColumns>
+          <Column Name="VersionDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{0BE2D432-DBC6-4468-9249-D8AA886CC050}</DataSourceID>
+        <Table DataSource="DESKTOP-SAMSON" Database="AdventureWorks2019" Schema="dbo" Table="AWBuildVersion" RowCount="1" />
+        <Column Name="ModifiedDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        <NumberOfDistinctValues>1</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>2017-10-27T14:33:02.3470000</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{0BE2D432-DBC6-4468-9249-D8AA886CC050}</DataSourceID>
+        <Table DataSource="DESKTOP-SAMSON" Database="AdventureWorks2019" Schema="dbo" Table="AWBuildVersion" RowCount="1" />
+        <KeyColumns>
+          <Column Name="ModifiedDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{0BE2D432-DBC6-4468-9249-D8AA886CC050}</DataSourceID>
+        <Table DataSource="DESKTOP-SAMSON" Database="AdventureWorks2019" Schema="dbo" Table="AWBuildVersion" RowCount="1" />
+        <Column Name="SystemInformationID" SqlDbType="TinyInt" MaxLength="0" Precision="3" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        <NumberOfDistinctValues>1</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>1</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{0BE2D432-DBC6-4468-9249-D8AA886CC050}</DataSourceID>
+        <Table DataSource="DESKTOP-SAMSON" Database="AdventureWorks2019" Schema="dbo" Table="AWBuildVersion" RowCount="1" />
+        <Column Name="Database Version" SqlDbType="NVarChar" MaxLength="25" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>13</MinLength>
+        <MaxLength>13</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>13</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{0BE2D432-DBC6-4468-9249-D8AA886CC050}</DataSourceID>
+        <Table DataSource="DESKTOP-SAMSON" Database="AdventureWorks2019" Schema="dbo" Table="AWBuildVersion" RowCount="1" />
+        <Column Name="SystemInformationID" SqlDbType="TinyInt" MaxLength="0" Precision="3" Scale="0" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        <MinValue>1</MinValue>
+        <MaxValue>1</MaxValue>
+        <Mean>1</Mean>
+        <StdDev>0</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{0BE2D432-DBC6-4468-9249-D8AA886CC050}</DataSourceID>
+        <Table DataSource="DESKTOP-SAMSON" Database="AdventureWorks2019" Schema="dbo" Table="AWBuildVersion" RowCount="1" />
+        <Column Name="VersionDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        <MinValue>2017-08-22T19:39:35.6430000</MinValue>
+        <MaxValue>2017-08-22T19:39:35.6430000</MaxValue>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{0BE2D432-DBC6-4468-9249-D8AA886CC050}</DataSourceID>
+        <Table DataSource="DESKTOP-SAMSON" Database="AdventureWorks2019" Schema="dbo" Table="AWBuildVersion" RowCount="1" />
+        <Column Name="ModifiedDate" SqlDbType="DateTime" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        <MinValue>2017-10-27T14:33:02.3470000</MinValue>
+        <MaxValue>2017-10-27T14:33:02.3470000</MaxValue>
+      </ColumnStatisticsProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{0BE2D432-DBC6-4468-9249-D8AA886CC050}</DataSourceID>
+        <Table DataSource="DESKTOP-SAMSON" Database="AdventureWorks2019" Schema="dbo" Table="AWBuildVersion" RowCount="1" />
+        <Column Name="Database Version" SqlDbType="NVarChar" MaxLength="25" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="false" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>14.0.1000.169</RegexText>
+            <Frequency>100</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+    </Profiles>
+  </DataProfileOutput>
+</DataProfile>
